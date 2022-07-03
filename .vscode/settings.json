@@ -1,12 +1,10 @@
 {
-   "python.linting.pylintEnabled": true,
+   "python.linting.pylintEnabled": false,
    "python.linting.enabled": true,
-   "python.linting.pep8Enabled": false,
    "python.linting.flake8Enabled": true,
    "python.terminal.activateEnvironment": false,
-   "python.formatting.autopep8Path": "/home/gitpod/.pyenv/shims/autopep8",
-   "python.linting.flake8Path": "/home/gitpod/.pyenv/shims/flake8",
-   "cornflakes.linter.executablePath": "/home/gitpod/.pyenv/shims/flake8",
+   "python.formatting.autopep8Path": "/home/kristian/OneDrive/GitHub/django-to-do/.venv/bin/flake8",
+   "python.linting.flake8Path": "/home/kristian/OneDrive/GitHub/django-to-do/.venv/bin/flake8",
    "files.exclude": {
       "**/.DS_Store": true,
       "**/.git": true,
