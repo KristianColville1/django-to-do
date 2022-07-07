@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django-todo-app-kc-96.herokuapp.com']
+ALLOWED_HOSTS = [os.environ.get('HEROKU_HOST_NAME')]
 
 
 # Application definition
@@ -85,8 +85,7 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 # }
 
 DATABASES = {
-    'default': dj_database_url.parse(
-        'postgres://thzvledtwlspua:75776fbe8871723985554304905982aaea7704a88a143f820d5ea4f28fed68ee@ec2-54-228-32-29.eu-west-1.compute.amazonaws.com:5432/de31sp8lrkk0g4')
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
 }
 
 # Password validation
