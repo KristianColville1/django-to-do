@@ -10,9 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import os
 import dj_database_url
 from pathlib import Path
-from env import SECRET_KEY
+if os.path.exists("env.py"):
+    import env
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -90,7 +92,7 @@ DATABASES = {
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
-SECRET_KEY = SECRET_KEY
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 AUTH_PASSWORD_VALIDATORS = [
     {
